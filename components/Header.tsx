@@ -19,21 +19,25 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Image
-          src="/logo/logo.png"
-          alt="Angural Furniture"
-          width={160}
-          height={45}
-          className="hidden sm:block"
-        />
+        <Link href={"/"}>
+          <Image
+            src="/logo/logo.png"
+            alt="Angural Furniture"
+            width={180}
+            height={50}
+            className="hidden sm:block"
+          />
+        </Link>
 
-        <Image
-          src="/logo/logo-icon.png"
-          alt="Angural Furniture"
-          width={36}
-          height={36}
-          className="sm:hidden bg-transparent"
-        />
+        <Link href={"/"}>
+          <Image
+            src="/logo/logo-icon.png"
+            alt="Angural Furniture"
+            width={36}
+            height={36}
+            className="sm:hidden bg-transparent"
+          />
+        </Link>
 
 
         {/* DESKTOP NAV */}
