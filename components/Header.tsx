@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { LuMenu } from "react-icons/lu";
+import { RxCross2 } from "react-icons/rx";
 
 const furnitureItems = [
   { label: "Beds", slug: "beds" },
@@ -84,7 +86,7 @@ export default function Header() {
           onClick={() => setMobileOpen(true)}
           aria-label="Open menu"
         >
-          ☰
+          <LuMenu />
         </button>
       </div>
 
@@ -97,7 +99,7 @@ export default function Header() {
               className="text-xl mb-6"
               onClick={() => setMobileOpen(false)}
             >
-              ✕
+              <RxCross2 />
             </button>
 
             <nav className="flex flex-col gap-4">
