@@ -18,27 +18,26 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href={"/"}>
-          <Image
-            src="/logo/logo.png"
-            alt="Angural Furniture"
-            width={180}
-            height={50}
-            className="hidden sm:block"
-          />
-        </Link>
-
-        <Link href={"/"}>
-          <Image
-            src="/logo/logo-icon.png"
-            alt="Angural Furniture"
-            width={36}
-            height={36}
-            className="sm:hidden bg-transparent"
-          />
-        </Link>
-
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center gap-4">
+        {/* Logo – always left, does not shrink */}
+        <div className="shrink-0 flex items-center justify-start">
+          <Link href={"/"} className="inline-flex">
+            <Image
+              src="/logo/logo.png"
+              alt="Angural Furniture"
+              width={180}
+              height={50}
+              className="hidden sm:block"
+            />
+            <Image
+              src="/logo/logo-icon.png"
+              alt="Angural Furniture"
+              width={36}
+              height={36}
+              className="sm:hidden bg-transparent"
+            />
+          </Link>
+        </div>
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex gap-6 items-center">
@@ -81,8 +80,9 @@ export default function Header() {
 
         {/* MOBILE HAMBURGER */}
         <button
-          className="md:hidden text-2xl"
+          className="md:hidden shrink-0 text-2xl p-2 -m-2 touch-manipulation"
           onClick={() => setMobileOpen(true)}
+          aria-label="Open menu"
         >
           ☰
         </button>
