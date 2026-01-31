@@ -18,22 +18,22 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center gap-4">
+      <div className="max-w-7xl mx-auto p-3 p-md-4 flex justify-between items-center gap-4">
         {/* Logo – always left, does not shrink */}
         <div className="shrink-0 flex items-center justify-start">
           <Link href={"/"} className="inline-flex">
             <Image
               src="/logo/logo.png"
               alt="Angural Furniture"
-              width={180}
+              width={160}
               height={50}
               className="hidden sm:block"
             />
             <Image
-              src="/logo/logo-icon.png"
+              src="/logo/logo.png"
               alt="Angural Furniture"
-              width={36}
-              height={36}
+              width={140}
+              height={50}
               className="sm:hidden bg-transparent"
             />
           </Link>
